@@ -1,0 +1,29 @@
+import java.util.Random;
+
+// The probability of getting a 4 when you throw a dice should be about 0.167
+// In expirements however, we usually get a different number
+// However, as n increases we get closer to 0.167
+
+
+public class DiceProbability {
+
+	public static void main(String[] args) {
+		
+		Random r = new Random();
+
+		// change the varible n to see how the result gets closer to 0.167
+	    double n = 1000;
+	    double m = 0;
+
+	    for(int i = 0; i < n; i++) {
+	        int a = r.nextInt(6) + 1;
+	        if(a == 4) {
+	        	m++;
+	        }
+	    }
+	    
+	    System.out.println(m/n);
+   
+	}
+    
+}
